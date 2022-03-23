@@ -1,10 +1,12 @@
+package main;
+
 import java.util.*;
 import java.text.*;
 
 public class Chore {
 
    //1. Create the chore, set a bounty, change a bounty, set a time window, get remaining time, set description/title/type, 
-   private double bountyAmmount;
+   private double bountyAmount;
    private String bountyResource;
    private String choreName;
    private String choreDescription;
@@ -12,14 +14,20 @@ public class Chore {
    private Date endDate;
    private String pattern = "yyyy-MM-dd";
    
-   public Chore () {}
+   public Chore() {}
    
-   public void setABounty(double bountyAmmount) {
-      this.bountyAmmount = bountyAmmount;
+   public Chore (double bountyAmount, String choreName, String choreDescription) {
+	   this.bountyAmount = bountyAmount;
+	   this.choreName = choreName;
+	   this.choreDescription = choreDescription;
+   }
+   
+   public void setABounty(double bountyAmount) {
+      this.bountyAmount = bountyAmount;
    }
    
    public double getABounty() {
-      return this.bountyAmmount;
+      return this.bountyAmount;
    }
    
    public void setBountyResource(String bountyResource) {
@@ -54,14 +62,14 @@ public class Chore {
    }
    
    public String toString() {
-      return this.bountyAmmount + " " + this.bountyResource + " " + this.choreName + " " + getChoreDescription() + " " + getTimeWindow();
+      return this.bountyAmount + " " + this.bountyResource + " " + this.choreName + " " + getChoreDescription() + " " + getTimeWindow();
    }
 
-public String getChoreDescription() {
-	return choreDescription;
-}
-
-public void setChoreDescription(String choreDescription) {
-	this.choreDescription = choreDescription;
-}
+	public String getChoreDescription() {
+		return choreDescription;
+	}
+	
+	public void setChoreDescription(String choreDescription) {
+		this.choreDescription = choreDescription;
+	}
 }
