@@ -54,11 +54,7 @@ public class Chore {
    }
    
    public String toString() {
-<<<<<<< HEAD
       return this.bountyAmmount + " " + this.bountyResource + " " + this.choreName + " " + getChoreDescription() + " " + getTimeWindow();
-=======
-      return this.bountyAmmount + " " + this.bountyResource + " " + this.choreName + " " + getTimeWindow();
->>>>>>> fc38cdbc6b30d45d9a4e637652a347ee40a9af01
    }
 
 public String getChoreDescription() {
