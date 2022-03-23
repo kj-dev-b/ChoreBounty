@@ -14,5 +14,18 @@ class ChoreTest {
         assertEquals(testChore.getABounty(), 0.0);
         assertEquals(testChore.getTimeWindow(), "Tue Mar 22 00:00:00 PDT 2022 - Wed Mar 30 00:00:00 PDT 2022");
     }
-
+    @Test 
+    void testChoredDescriptionAndResource() {
+    	Chore testChore1 = new Chore();
+    	testChore1.setBountyResource("beers");
+    	testChore1.setChoreDescription("Wash the goddam dishes");
+    	assertEquals(testChore1.getBountyResource(), "beers");
+    	assertEquals(testChore1.getChoreDescription(), "Wash the goddam dishes");
+    }
+    @Test
+    void testUserName() {
+    	User testUser = new User();
+    	testUser.setUserName("Nathan");
+    	assertEquals("Nathan", testUser.getUserName());
+    }
 }

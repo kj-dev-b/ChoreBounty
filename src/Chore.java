@@ -4,20 +4,30 @@ import java.text.*;
 public class Chore {
 
    //1. Create the chore, set a bounty, change a bounty, set a time window, get remaining time, set description/title/type, 
-   private double bounty;
+   private double bountyAmmount;
+   private String bountyResource;
    private String choreName;
+   private String choreDescription;
    private Date startDate;
    private Date endDate;
    private String pattern = "yyyy-MM-dd";
    
    public Chore () {}
    
-   public void setABounty(double bounty) {
-      this.bounty = bounty;
+   public void setABounty(double bountyAmmount) {
+      this.bountyAmmount = bountyAmmount;
    }
    
    public double getABounty() {
-      return this.bounty;
+      return this.bountyAmmount;
+   }
+   
+   public void setBountyResource(String bountyResource) {
+	   this.bountyResource = bountyResource;
+   }
+   
+   public String getBountyResource () {
+	   return this.bountyResource;
    }
    
    public void setChoreName(String choreName) {
@@ -44,6 +54,14 @@ public class Chore {
    }
    
    public String toString() {
-      return this.bounty + " " + this.choreName + " " + getTimeWindow();
+      return this.bountyAmmount + " " + this.bountyResource + " " + this.choreName + " " + getChoreDescription() + " " + getTimeWindow();
    }
+
+public String getChoreDescription() {
+	return choreDescription;
+}
+
+public void setChoreDescription(String choreDescription) {
+	this.choreDescription = choreDescription;
+}
 }
