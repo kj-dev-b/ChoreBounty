@@ -12,16 +12,13 @@ public class Chores {
         this.database = database;
     }
 	
+    // Returns all chores from db
 	public List<Chore> getAllChores() {
 		// not implemented
 		return this.database.getAllChores();
 	}
 	
-	public Chore getChoreByName(String choreName) {
-		// not implemented
-		return this.database.getChoreByName(choreName);
-	}
-	
+	// Returns all chores assigned to the given user
 	public List<Chore> getChoresForUser(String userName) {
 		// not implemented
 		return this.database.getChoresForUser(userName);
