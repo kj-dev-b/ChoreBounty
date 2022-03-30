@@ -10,13 +10,18 @@ public class Chore {
    private String bountyResource;
    private String choreName;
    private String choreDescription;
+   private String choreID;
    private Date startDate;
    private Date endDate;
    private String pattern = "yyyy-MM-dd";
+   private static int choreNumber = 0;
    
-   public Chore() {}
+   public Chore() {
+	   this(-1, "noName", "noDescription");
+   }
    
    public Chore (double bountyAmount, String choreName, String choreDescription) {
+	   this.setChoreID(choreNumber++);
 	   this.bountyAmount = bountyAmount;
 	   this.choreName = choreName;
 	   this.choreDescription = choreDescription;
@@ -71,5 +76,13 @@ public class Chore {
 	
 	public void setChoreDescription(String choreDescription) {
 		this.choreDescription = choreDescription;
+	}
+	
+	public String getChoreID() {
+		return this.choreID;
+	}
+	
+	private void setChoreID(int choreID) {
+		this.choreID = "c" + choreID;
 	}
 }

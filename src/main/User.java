@@ -3,11 +3,15 @@ package main;
 public class User {
 
 	private String userName;
+	private static int numberOfUsers = 0;
 	
-	public User() {}
+	public User() {
+		this("defaultUser" + (numberOfUsers + 1));
+	}
 	
 	public User(String userName) {
 		this.userName = userName;
+		numberOfUsers++;
 	}
 	
 	public void setUserName(String userName) {
@@ -16,6 +20,10 @@ public class User {
 	   
 	public String getUserName () {
 		return this.userName;
+	}
+	
+	public static int getNumberOfUsers() {
+		return numberOfUsers;
 	}
 
 }
