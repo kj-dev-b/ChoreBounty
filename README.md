@@ -1,5 +1,5 @@
 # ChoreBounty
-## Authored By: Keegan, Nate, Will
+## Authored By: Keegan Jordan, Nate Bryant, Will Kluck
 ### Created: 2022-03-22
 
 
